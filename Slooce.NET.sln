@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slooce.NET", "Slooce.NET\Slooce.NET.csproj", "{5E6DC03F-A007-45BC-91BA-610E91AEC516}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slooce.NET.Test", "Slooce.NET.Test\Slooce.NET.Test.csproj", "{EC867622-5CB4-424B-BC5F-81CA1FD1D793}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E6DC03F-A007-45BC-91BA-610E91AEC516}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E6DC03F-A007-45BC-91BA-610E91AEC516}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E6DC03F-A007-45BC-91BA-610E91AEC516}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E6DC03F-A007-45BC-91BA-610E91AEC516}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC867622-5CB4-424B-BC5F-81CA1FD1D793}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC867622-5CB4-424B-BC5F-81CA1FD1D793}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC867622-5CB4-424B-BC5F-81CA1FD1D793}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC867622-5CB4-424B-BC5F-81CA1FD1D793}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
