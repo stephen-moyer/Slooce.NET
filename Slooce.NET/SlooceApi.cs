@@ -16,6 +16,12 @@ namespace Slooce.NET
 
         private const string XmlMediaType = "application/xml";
 
+        private static readonly XmlSerializerNamespaces EmptyNamespaces = new XmlSerializerNamespaces(new[] { XmlQualifiedName.Empty });
+        private static readonly XmlWriterSettings WriterSettings = new XmlWriterSettings
+        {
+            OmitXmlDeclaration = true
+        };
+
         private Lazy<HttpClient> clientLazy;
 
         public SlooceConfig Config { get; }
@@ -131,16 +137,12 @@ namespace Slooce.NET
             where TRequest : BaseRequest
             where TResponse : BaseResponse
         {
-            var emptyNamepsaces = new XmlSerializerNamespaces(new[] { XmlQualifiedName.Empty });
-            var settings = new XmlWriterSettings();
-            settings.OmitXmlDeclaration = true;
-
             using (var stringWriter = new StringWriter())
-            using (var xmlWriter = XmlWriter.Create(stringWriter, settings))
+            using (var xmlWriter = XmlWriter.Create(stringWriter, WriterSettings))
             {
                 //serialize message and build content body
                 var serializer = XmlSerializerCache<TRequest>.Serializer;
-                serializer.Serialize(xmlWriter, message, emptyNamepsaces);
+                serializer.Serialize(xmlWriter, message, EmptyNamespaces);
                 var content = new StringContent(stringWriter.ToString(), Encoding.UTF8, XmlMediaType);
 
                 string url = keyword == null ? $"{user}/{action}" : $"{user}/{keyword}/{action}";
