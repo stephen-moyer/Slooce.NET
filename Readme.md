@@ -17,7 +17,7 @@
 1. Send a text
 
     ```
-    var textResponse = await api.SendMtMessageAsync("15555555555", "yourkeyword");
+    var textResponse = await api.SendMtMessageAsync("15555555555", "yourkeyword", "Hellow world");
     //check result
     Console.WriteLine($"Text response: {textResponse.Result}");
     ```
